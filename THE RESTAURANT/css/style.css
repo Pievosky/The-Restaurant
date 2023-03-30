@@ -1,0 +1,420 @@
+/******
+font-family: 'Cinzel', serif;
+font-family: 'Montserrat', sans-serif;
+gold: #e9c156 #ffffaa #e1ab39 #633110 #e9c156
+LINEAR GOLD: background-image: linear-gradient(
+  130deg,
+  hsl(44deg 77% 63%) 0%,
+  hsl(48deg 80% 69%) 8%,
+  hsl(52deg 85% 75%) 16%,
+  hsl(58deg 96% 82%) 23%,
+  hsl(54deg 87% 76%) 31%,
+  hsl(48deg 79% 68%) 39%,
+  hsl(43deg 75% 59%) 47%,
+  hsl(38deg 62% 50%) 54%,
+  hsl(33deg 64% 41%) 62%,
+  hsl(28deg 67% 30%) 69%,
+  hsl(25deg 68% 26%) 77%,
+  hsl(31deg 59% 38%) 85%,
+  hsl(37deg 53% 50%) 92%,
+  hsl(44deg 77% 63%) 100%
+);
+******/
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    background-color: black;
+    overflow-x: hidden;
+}
+/****NAVBAR****/
+header{
+    z-index: 1;
+}
+
+nav{
+    z-index: 1;
+    position: fixed;
+    max-width: 1660px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.hamburger{
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #e9c156;
+}
+
+  .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+        transform: translateX(15px);
+        transition: 0.2s;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.4s;
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.4s;
+    }
+
+    .nav-menu{
+        position: fixed;
+        top: -100%;
+        padding: 0 0;
+        flex-direction: column;
+        background-color: #1a181d70;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        text-align: right;
+        transition: 0.6s ease-in-out;
+        backdrop-filter: blur(5px);
+    }
+
+    .box-container{
+        max-width: 1440px;
+        margin-top: 250px;
+    }
+
+    li{
+        margin-bottom: 30px;
+    }
+
+    .nav-item{
+        color: #b3933ca1;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        padding-right: 30px;
+    }
+
+    .nav-item:hover{
+        color: #e9c156;
+        transition: .4s ease;
+    }
+
+    .nav-menu.active{
+        top: 0;
+    }
+
+#book-btn{
+    padding: 5px 0 5px 10px;
+    color: #e9c156;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 12px;
+    border: solid 4px #e9c156;
+    transition: transform .2s;
+    margin-right: 30px;
+}
+
+#book-btn:hover{
+    transform: scale(0.950);
+    color: black;
+    background-color: #e9c156;
+    border-color: black;
+    transition: .2s ;
+
+}
+
+/*****BOOKMARK*****/
+
+.bookmark-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookmark{
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 25px;
+}
+
+.line{
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 5px;
+    background-image: linear-gradient(
+    130deg,
+    hsl(44deg 77% 63%) 0%,
+    hsl(48deg 80% 69%) 8%,
+    hsl(52deg 85% 75%) 16%,
+    hsl(58deg 96% 82%) 23%,
+    hsl(54deg 87% 76%) 31%,
+    hsl(48deg 79% 68%) 39%,
+    hsl(43deg 75% 59%) 47%,
+    hsl(38deg 62% 50%) 54%,
+    hsl(33deg 64% 41%) 62%,
+    hsl(28deg 67% 30%) 69%,
+    hsl(25deg 68% 26%) 77%,
+    hsl(31deg 59% 38%) 85%,
+    hsl(37deg 53% 50%) 92%,
+    hsl(44deg 77% 63%) 100%
+    );
+}
+
+.line2{
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 5px;
+    background-image: linear-gradient(
+    130deg,
+    hsl(44deg 77% 63%) 0%,
+    hsl(37deg 53% 50%) 8%,
+    hsl(31deg 59% 38%) 16%,
+    hsl(25deg 68% 26%) 23%,
+    hsl(28deg 67% 30%) 31%,
+    hsl(33deg 64% 41%) 39%,
+    hsl(38deg 62% 50%) 47%,
+    hsl(43deg 75% 59%) 54%,
+    hsl(48deg 79% 68%) 62%,
+    hsl(54deg 87% 76%) 69%,
+    hsl(58deg 96% 82%) 77%,
+    hsl(52deg 85% 75%) 85%,
+    hsl(48deg 80% 69%) 92%,
+    hsl(44deg 77% 63%) 100%
+    );
+}
+
+h3{
+    background-image: linear-gradient(
+        130deg,
+        hsl(44deg 77% 63%) 0%,
+        hsl(48deg 80% 69%) 8%,
+        hsl(52deg 85% 75%) 16%,
+        hsl(58deg 96% 82%) 23%,
+        hsl(54deg 87% 76%) 31%,
+        hsl(48deg 79% 68%) 39%,
+        hsl(43deg 75% 59%) 47%,
+        hsl(38deg 62% 50%) 54%,
+        hsl(33deg 64% 41%) 62%,
+        hsl(28deg 67% 30%) 69%,
+        hsl(25deg 68% 26%) 77%,
+        hsl(31deg 59% 38%) 85%,
+        hsl(37deg 53% 50%) 92%,
+        hsl(44deg 77% 63%) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Cinzel', serif;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 18px;
+}
+
+
+/***FOOTER***/
+.footer{
+    max-width: 100%;
+    border-top: solid 1px #e9c156;
+}
+
+.footer-blocks{
+    max-width: 1660px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px
+}
+
+.footer-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    color: #e9c156;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-content{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.footer-links:hover{
+    color: #e9c156;
+    transition: 0.4s;
+}
+
+.footer-icon{
+    color: white;
+    margin: 0 20px;
+}
+
+.social-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-icon:hover{
+    color: #e9c156;
+    transition: 0.4s;
+}
+
+
+/**SCROLLBAR**/
+
+::-webkit-scrollbar{
+    width: 8px;
+    margin-right: 5px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #2e2e2e
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #444444;
+}
+
+/**BREAKPOINTS**/
+
+@media (max-width: 1300px) {
+    .hub{
+        flex-wrap: wrap;
+        width: 69.6%;
+        padding-bottom: 200px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .hub{
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo{
+        width: 650px;
+        height: 650px;
+    }
+    .hub{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav{
+        justify-content: center;
+        align-items: center;
+        top: 0;
+    }
+
+    .img-container{
+        margin-top: 100px;
+    }
+    
+
+    #logo{
+        width: 500px;
+        height: 500px;
+    }
+
+    .hamburger{
+        margin-right: 0;
+    }
+
+    #homepage{
+        height: 900px;
+    }
+
+    .hub{
+        padding-bottom: 100px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/bckgrnd-2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .hub-img{
+        width: 250px;
+        height: 400px;
+    }
+    .overlay{
+        width: 89%;
+    }
+
+    .footer-blocks{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #book-btn{
+        font-size: 14px;
+    }
+
+    #logo{
+        width: 390px;
+        height: 390px;
+    }
+
+    h1{
+        font-size: 32px;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    #homepage{
+        height: 700px;
+    }
+
+    #icon{
+        display: none;
+    }
+
+    .overlay{
+        width: 100%;
+    }
+}

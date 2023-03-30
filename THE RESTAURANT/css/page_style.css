@@ -1,0 +1,84 @@
+/******
+font-family: 'Cinzel', serif;
+font-family: 'Montserrat', sans-serif;
+gold: #e9c156 #ffffaa #e1ab39 #633110 #e9c156
+LINEAR GOLD: background-image: linear-gradient(
+  130deg,
+  hsl(44deg 77% 63%) 0%,
+  hsl(48deg 80% 69%) 8%,
+  hsl(52deg 85% 75%) 16%,
+  hsl(58deg 96% 82%) 23%,
+  hsl(54deg 87% 76%) 31%,
+  hsl(48deg 79% 68%) 39%,
+  hsl(43deg 75% 59%) 47%,
+  hsl(38deg 62% 50%) 54%,
+  hsl(33deg 64% 41%) 62%,
+  hsl(28deg 67% 30%) 69%,
+  hsl(25deg 68% 26%) 77%,
+  hsl(31deg 59% 38%) 85%,
+  hsl(37deg 53% 50%) 92%,
+  hsl(44deg 77% 63%) 100%
+);
+******/
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/**PAGE CONTENT**/
+.bookmark-container{
+    padding-top: 80px;
+}
+
+.main-container{
+    max-width: 1660px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.description-container{
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description{
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    font-size: 21px;
+    color: #e9c156;
+}
+
+.gallery-container{
+    width: 50%;
+}
+
+/**BREAKPOINTS**/
+
+@media (max-width:768px) {
+    .description-container{
+        max-width: 80%;
+    }
+
+    .gallery-container{
+        padding-top: 50px;
+        padding-bottom: 30px;
+        width: 300px;
+    }
+}

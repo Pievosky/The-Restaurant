@@ -1,0 +1,184 @@
+/******
+font-family: 'Cinzel', serif;
+font-family: 'Montserrat', sans-serif;
+gold: #e9c156 #ffffaa #e1ab39 #633110 #e9c156
+LINEAR GOLD: background-image: linear-gradient(
+  130deg,
+  hsl(44deg 77% 63%) 0%,
+  hsl(48deg 80% 69%) 8%,
+  hsl(52deg 85% 75%) 16%,
+  hsl(58deg 96% 82%) 23%,
+  hsl(54deg 87% 76%) 31%,
+  hsl(48deg 79% 68%) 39%,
+  hsl(43deg 75% 59%) 47%,
+  hsl(38deg 62% 50%) 54%,
+  hsl(33deg 64% 41%) 62%,
+  hsl(28deg 67% 30%) 69%,
+  hsl(25deg 68% 26%) 77%,
+  hsl(31deg 59% 38%) 85%,
+  hsl(37deg 53% 50%) 92%,
+  hsl(44deg 77% 63%) 100%
+);
+******/
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+/*****HOMEPAGE*****/
+#homepage{
+    background-image: url(../img/bckgrnd-1-rvrs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{
+    font-family: 'Cinzel', serif;
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 18px;
+    margin-bottom: 80px;
+    background-image: linear-gradient(
+    130deg,
+    hsl(44deg 77% 63%) 0%,
+    hsl(48deg 80% 69%) 8%,
+    hsl(52deg 85% 75%) 16%,
+    hsl(58deg 96% 82%) 23%,
+    hsl(54deg 87% 76%) 31%,
+    hsl(48deg 79% 68%) 39%,
+    hsl(43deg 75% 59%) 47%,
+    hsl(38deg 62% 50%) 54%,
+    hsl(33deg 64% 41%) 62%,
+    hsl(28deg 67% 30%) 69%,
+    hsl(25deg 68% 26%) 77%,
+    hsl(31deg 59% 38%) 85%,
+    hsl(37deg 53% 50%) 92%,
+    hsl(44deg 77% 63%) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#logo{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 750px;
+    height: 750px;
+
+}
+
+#icon{
+    padding-bottom: 80px;
+    color: #e9c156;
+    transition: transform .2s;
+}
+
+#icon:hover{
+    transform: translateY(10px);
+    transition: .2s;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*****HUB*****/
+
+#hub{
+    background-image: url(../img/bckgrnd-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 1000px;
+}
+
+.hub{
+    max-width: 1660px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container {
+    margin-top: 140px;
+    position: relative;
+    max-width: 300px;
+}
+  
+
+.hub-img {
+    width: 300px;
+    height: 450px;
+    filter: grayscale(100%);
+    display: block;
+    transition: 0.4s;
+}
+
+  
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background-color: #1a181d70;
+    width: 100%;
+    transition: .4s;
+    opacity:0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(
+        130deg,
+        hsl(44deg 77% 63%) 0%,
+        hsl(48deg 80% 69%) 8%,
+        hsl(52deg 85% 75%) 16%,
+        hsl(58deg 96% 82%) 23%,
+        hsl(54deg 87% 76%) 31%,
+        hsl(48deg 79% 68%) 39%,
+        hsl(43deg 75% 59%) 47%,
+        hsl(38deg 62% 50%) 54%,
+        hsl(33deg 64% 41%) 62%,
+        hsl(28deg 67% 30%) 69%,
+        hsl(25deg 68% 26%) 77%,
+        hsl(31deg 59% 38%) 85%,
+        hsl(37deg 53% 50%) 92%,
+        hsl(44deg 77% 63%) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 10px;
+        white-space: nowrap;
+  }
+  
+  
+
+  .container:hover .overlay {
+    opacity: 1;
+    transform: scale(0.950);
+    transform: translateY(-10px);
+    transition: 0.4s;
+    
+    }
+    
+    .hub-img:hover{
+    filter: grayscale(0%);
+    transform: scale(0.950);
+    transition: 0.4s;
+    } 

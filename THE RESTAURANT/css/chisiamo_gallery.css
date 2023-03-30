@@ -1,0 +1,56 @@
+.gallery{
+    width: 350px;
+    height: 500px;
+    animation: gallery 20s ease-in infinite;
+    margin-left: 30%;
+}
+
+
+@keyframes gallery {
+
+    0%,100%{
+        background-image: url(../img/chisiamogallery1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    20%{
+        background-image: url(../img/chisiamogallery2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    40%{
+        background-image: url(../img/chisiamogallery3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    60%{
+        background-image: url(../img/chisiamogallery4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    80%{
+        background-image: url(../img/chisiamogallery5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+}
+
+/**BREAKPOINTS**/
+
+@media (max-width: 992px) {
+    .gallery{
+        width: 300px;
+        height: 450px;
+    }
+}
+
+@media (max-width:768px) {
+    .gallery{
+        margin: 0 0;
+    }
+}
